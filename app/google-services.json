@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712777586161",
+    "project_id": "hotel-manager-nith",
+    "storage_bucket": "hotel-manager-nith.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712777586161:android:c3fbfd90968b3f77642050",
+        "android_client_info": {
+          "package_name": "com.example.hotelmanagernith"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712777586161-pspjbprr3amum5up63rdrdihq6l7qjoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwQ1CQZLRMF4cHAQjwDhmgNZulpEFi7C0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712777586161-pspjbprr3amum5up63rdrdihq6l7qjoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

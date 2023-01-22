@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home->makeCurrentFragment( homeFragement)
                 R.id.settings->makeCurrentFragment(settingsFragement)
-                R.id.profile -> makeCurrentFragment(profileFragement)
+                R.id.fab -> makeCurrentFragment(profileFragement)
 
             }
             true

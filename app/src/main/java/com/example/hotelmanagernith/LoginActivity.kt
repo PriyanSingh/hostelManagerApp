@@ -25,6 +25,10 @@ class LoginActivity : AppCompatActivity() {
             val intent =Intent(this,SignUp::class.java)
             startActivity(intent)
         }
+        binding.btnForgotPassword.setOnClickListener{
+            val intent=Intent(this,ResetPassword::class.java)
+            startActivity(intent)
+        }
 
         binding.button.setOnClickListener{
             val email=binding.editTextTextPersonName.text.toString()
@@ -44,8 +48,7 @@ class LoginActivity : AppCompatActivity() {
                                 Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show()
                             }
                         }else{
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                            val ans=it.exception.toString()
+                            Toast.makeText(this,"Invalid username or password", Toast.LENGTH_SHORT).show()
                         }
 
                     }

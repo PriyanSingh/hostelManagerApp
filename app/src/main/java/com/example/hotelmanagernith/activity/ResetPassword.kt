@@ -1,10 +1,9 @@
-package com.example.hotelmanagernith
+package com.example.hotelmanagernith.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.hotelmanagernith.databinding.ActivityResetPasswordBinding
-import com.example.hotelmanagernith.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_reset_password.*
 

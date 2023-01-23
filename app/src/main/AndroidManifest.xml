@@ -14,20 +14,24 @@
         android:theme="@style/Theme.HotelManagerNith"
         tools:targetApi="31">
         <activity
-            android:name=".ResetPassword"
-            android:exported="false">
+            android:name=".activity.ResetPassword"
+            android:exported="false"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.SignUp"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

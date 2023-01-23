@@ -2,14 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="Home"
-        android:id="@+id/home"
-        android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:title=""
-
+    <item android:title="Profile"
         android:id="@+id/profile"
-        />
-    <item android:title="Settings"
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"/>
+        android:icon="@drawable/ic_baseline_person_24"/>
+    <item android:title="Outpasses"
+        android:id="@+id/outpass"
+        android:icon="@drawable/ic_baseline_insert_drive_file_24"/>
 </menu>

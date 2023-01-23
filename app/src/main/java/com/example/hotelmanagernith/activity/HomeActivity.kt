@@ -3,10 +3,7 @@ package com.example.hotelmanagernith.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.hotelmanagernith.HomeFragement
-import com.example.hotelmanagernith.ProfileFragement
-import com.example.hotelmanagernith.R
-import com.example.hotelmanagernith.SettingsFragement
+import com.example.hotelmanagernith.*
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -15,20 +12,22 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val homeFragement= HomeFragement()
-        val settingsFragement= SettingsFragement()
-        val profileFragement= ProfileFragement()
+        val profileFragement= ProfileFragment()
+        val outpassFragment= OutpassFragment()
+        val allotmentFragment= AllotmentFragment()
 
-        makeCurrentFragment(homeFragement)
+        makeCurrentFragment(profileFragement)
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.home ->makeCurrentFragment( homeFragement)
-                R.id.settings ->makeCurrentFragment(settingsFragement)
-                R.id.fab -> makeCurrentFragment(profileFragement)
+                R.id.profile ->makeCurrentFragment(profileFragement)
+                R.id.outpass ->makeCurrentFragment(outpassFragment)
 
             }
             true
+        }
+        fab.setOnClickListener{
+            makeCurrentFragment(allotmentFragment)
         }
 
     }
@@ -38,4 +37,6 @@ class HomeActivity : AppCompatActivity() {
             replace(R.id.fl_wrapper,fragment)
             commit()
     }
+
+
 }

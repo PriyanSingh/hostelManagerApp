@@ -1,11 +1,10 @@
-package com.example.hotelmanagernith
+package com.example.hotelmanagernith.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.Toast
+import com.example.hotelmanagernith.ResetPassword
 import com.example.hotelmanagernith.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -22,11 +21,11 @@ class LoginActivity : AppCompatActivity() {
 
         firebaseAuth=FirebaseAuth.getInstance()
         binding.button2.setOnClickListener{
-            val intent =Intent(this,SignUp::class.java)
+            val intent =Intent(this, SignUp::class.java)
             startActivity(intent)
         }
         binding.btnForgotPassword.setOnClickListener{
-            val intent=Intent(this,ResetPassword::class.java)
+            val intent=Intent(this, ResetPassword::class.java)
             startActivity(intent)
         }
 

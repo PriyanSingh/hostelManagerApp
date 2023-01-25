@@ -1,4 +1,4 @@
-package com.example.hotelmanagernith.activity
+package com.example.hotelmanagernith
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

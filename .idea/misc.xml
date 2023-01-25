@@ -4,17 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/backgroundbtn.xml" value="0.1535" />
+        <entry key="app/src/main/res/drawable/circular_tick.xml" value="0.1865" />
         <entry key="app/src/main/res/drawable/edit_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_baseline_ballot_24.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_baseline_insert_drive_file_24.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1865" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/outpass_background.xml" value="0.1865" />
         <entry key="app/src/main/res/drawable/outpassbackground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/white_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24093272553981324" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13636363636363635" />
-        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.26313018798828125" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.17401253218104895" />
+        <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.21829710144927536" />
+        <entry key="app/src/main/res/layout/fragment_allotment_fragement.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/fragment_home_fragement.xml" value="0.23170928955078127" />
+        <entry key="app/src/main/res/layout/fragment_outpass_fragement.xml" value="0.30264129638671877" />
         <entry key="app/src/main/res/layout/fragment_profile_fragement.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/fragment_profilee_fragement.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_room_layout.xml" value="0.2228805541992188" />
+        <entry key="app/src/main/res/layout/fragment_room_search_fragment.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/fragment_settings_fragement.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/menu/btm_navigation.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.125" />

@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
         val profileFragement= ProfileFragment()
         val outpassFragment= OutpassFragment()
-        val allotmentFragment= AllotmentFragment()
+        val allotmentFragment= HostelNameSelector()
 
         makeCurrentFragment(profileFragement)
 
@@ -22,7 +22,6 @@ class HomeActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.profile ->makeCurrentFragment(profileFragement)
                 R.id.outpass ->makeCurrentFragment(outpassFragment)
-
             }
             true
         }

@@ -98,7 +98,6 @@
                         android:textStyle="bold"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:padding="10dp"
                         android:textSize="25dp"
                         android:textColor="@color/black"
                         android:text="Profile"
@@ -109,10 +108,37 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:layout_marginTop="14dp"
                         android:textSize="20dp"
                         android:inputType="textPersonName"
                         android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/tvRollNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_marginTop="14dp"
+                        android:textSize="20dp"
+                        android:inputType="textPersonName"
+                        android:text="Roll no" />
+                    <TextView
+                        android:id="@+id/tvHostel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_marginTop="14dp"
+                        android:textSize="20dp"
+                        android:inputType="textPersonName"
+                        android:text="Hostel" />
+                    <TextView
+                        android:id="@+id/tvRoomNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_marginTop="14dp"
+                        android:textSize="20dp"
+                        android:inputType="textPersonName"
+                        android:text="Room no" />
 
                     <TextView
                         android:id="@+id/tvAddress"
@@ -125,24 +151,16 @@
                         android:text="Address" />
 
 
+
                     <TextView
-                        android:id="@+id/etHostel"
+                        android:id="@+id/tvMobNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:layout_marginTop="14dp"
                         android:textSize="20dp"
                         android:inputType="textPersonName"
-                        android:text="Hostel Name" />
-
-                    <TextView
-                        android:id="@+id/etRoomNo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
-                        android:textSize="20dp"
-                        android:inputType="textPersonName"
-                        android:text="Room no" />
+                        android:text="Mobile No" />
 
 
                 </LinearLayout>

@@ -63,6 +63,8 @@ class ProfileFragment : Fragment() {
                 tvRoomNo.text=roomNo
                 tvAddress.text=adress
                 tvMobNo.text=mobNo
+                tvUserName.text=name
+                tvEmail.text=rollNo+"@nith.ac.in"
                 myDialogBinding.dismiss()
             }
         }

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "712777586161",
+    "firebase_url": "https://hotel-manager-nith-default-rtdb.firebaseio.com",
     "project_id": "hotel-manager-nith",
     "storage_bucket": "hotel-manager-nith.appspot.com"
   },

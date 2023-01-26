@@ -12,17 +12,21 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.hotelmanagernith.databinding.CustomDialogBinding
 import com.example.hotelmanagernith.databinding.FragmentProfileeFragementBinding
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.edit_profile_dialog_box.*
 import kotlinx.android.synthetic.main.edit_profile_dialog_box.view.*
 import kotlinx.android.synthetic.main.fragment_profilee_fragement.*
 
 class ProfileFragment : Fragment() {
+    private lateinit var database:DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding= FragmentProfileeFragementBinding.inflate(layoutInflater)
+        database= FirebaseDatabase.getInstance().getReference("name")
         lateinit var name:String
         lateinit var rollNo:String
         lateinit var hostel:String
@@ -44,6 +48,14 @@ class ProfileFragment : Fragment() {
                 roomNo=dialogBinding.etRoomNo.text.toString()
                 adress=dialogBinding.etAdress.text.toString()
                 mobNo=dialogBinding.etMobile.text.toString()
+                database=FirebaseDatabase.getInstance().getReference("user")
+                val User=user(rollNo,name,hostel,roomNo,adress,mobNo)
+                val id=database.push().key!!
+                database.child(id).setValue(User).addOnSuccessListener {
+                    Toast.makeText(this@ProfileFragment.requireContext(),"Succesfully Saved",Toast.LENGTH_LONG).show()
+                }.addOnFailureListener{
+                    Toast.makeText(this@ProfileFragment.requireContext(),"Failure",Toast.LENGTH_LONG).show()
+                }
 
                 tvName.text=name
                 tvRollNo.text=rollNo

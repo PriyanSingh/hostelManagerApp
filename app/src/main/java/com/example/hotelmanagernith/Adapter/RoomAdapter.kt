@@ -10,7 +10,7 @@ import com.example.hotelmanagernith.R
 
 class RoomAdapter: RecyclerView.Adapter<RoomAdapter.MyViewHolder>() {
 
-    private val userList=ArrayList<RoomData>()
+    val userList=ArrayList<RoomData>()
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 

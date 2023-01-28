@@ -78,19 +78,5 @@ class HostelNameSelector : Fragment() {
             adapter.updateUserList(it)
         })
 
-//        binding.svSearch.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-////                val list:arraryOf<RoomData> =
-//                binding.svSearch.clearFocus()
-////                if(list.contains(query){
-////
-////                }
-//            }
-
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                TODO("Not yet implemented")
-//            }
-
-//        })
     }
 }

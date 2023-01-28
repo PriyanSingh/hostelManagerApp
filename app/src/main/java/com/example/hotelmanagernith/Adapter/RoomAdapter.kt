@@ -1,9 +1,11 @@
 package com.example.hotelmanagernith.Adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hotelmanagernith.Models.RoomData
 import com.example.hotelmanagernith.R
@@ -11,6 +13,7 @@ import com.example.hotelmanagernith.R
 class RoomAdapter: RecyclerView.Adapter<RoomAdapter.MyViewHolder>() {
 
     val userList=ArrayList<RoomData>()
+    var itemClick =null
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
@@ -31,6 +34,9 @@ class RoomAdapter: RecyclerView.Adapter<RoomAdapter.MyViewHolder>() {
 
         holder.roomname.text=currentitem.roomNo
         holder.capacity.text=currentitem.capacity
+        holder.itemView.setOnClickListener{
+
+        }
     }
 
     override fun getItemCount(): Int {

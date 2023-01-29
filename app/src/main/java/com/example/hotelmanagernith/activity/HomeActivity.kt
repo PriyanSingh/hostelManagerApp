@@ -2,12 +2,12 @@ package com.example.hotelmanagernith.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.result.contract.ActivityResultContracts
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.hotelmanagernith.*
 import com.example.hotelmanagernith.databinding.ActivityHomeBinding
-import kotlinx.android.synthetic.main.activity_home.*
-import java.util.zip.Inflater
+import com.example.hotelmanagernith.fragments.OutpassFragment
+import com.example.hotelmanagernith.fragments.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -17,6 +17,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val k=intent.getStringExtra("message").toString()
+        Toast.makeText(this, k, Toast.LENGTH_SHORT).show()
 
         val profileFragement= ProfileFragment()
         val outpassFragment= OutpassFragment()

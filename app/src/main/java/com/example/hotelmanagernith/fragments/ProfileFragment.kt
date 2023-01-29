@@ -1,20 +1,18 @@
-package com.example.hotelmanagernith
+package com.example.hotelmanagernith.fragments
 
-import android.app.Activity
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
-import com.example.hotelmanagernith.databinding.CustomDialogBinding
+import com.example.hotelmanagernith.R
 import com.example.hotelmanagernith.databinding.FragmentProfileeFragementBinding
+import com.example.hotelmanagernith.Models.user
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.edit_profile_dialog_box.*
 import kotlinx.android.synthetic.main.edit_profile_dialog_box.view.*
 import kotlinx.android.synthetic.main.fragment_profilee_fragement.*
 
@@ -49,7 +47,7 @@ class ProfileFragment : Fragment() {
                 adress=dialogBinding.etAdress.text.toString()
                 mobNo=dialogBinding.etMobile.text.toString()
                 database=FirebaseDatabase.getInstance().getReference("user")
-                val User=user(rollNo,name,hostel,roomNo,adress,mobNo)
+                val User= user(rollNo,name,hostel,roomNo,adress,mobNo)
                 val id=database.push().key!!
                 database.child(id).setValue(User).addOnSuccessListener {
                     Toast.makeText(this@ProfileFragment.requireContext(),"Succesfully Saved",Toast.LENGTH_LONG).show()

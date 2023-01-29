@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.hotelmanagernith.fragments.ProfileFragment
 import com.example.hotelmanagernith.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -38,7 +39,10 @@ class LoginActivity : AppCompatActivity() {
                         if(it.isSuccessful){
                             val verification=firebaseAuth.currentUser?.isEmailVerified
                             if(verification==true) {
+                                val fragment= ProfileFragment()
+                                val mess=email.subSequence(0,8).toString()
                                 val intent = Intent(this, HomeActivity::class.java)
+                                intent.putExtra("message",mess)
                                 startActivity(intent)
                                 finish()
                             }

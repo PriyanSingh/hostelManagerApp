@@ -1,3 +1,13 @@
 package com.example.hotelmanagernith.Models
 
-data class user(val Rollno:String?=null,val Name:String?=null,val Hostel:String?=null,val RoomNo:String?=null,val address:String?=null,val MobileNo:String?=null)
+import android.net.Uri
+
+data class User(
+    val Name:String?=null,
+    val RollNo:String?=null,
+    val Age:String?=null,
+    val RoomNo:String?=null,
+    val address:String?=null,
+    val MobileNo:String?=null,
+    val image:String ?=null
+)

@@ -61,8 +61,8 @@ class SignUp : AppCompatActivity() {
                                             Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT)
                                                 .show()
                                         }
-//                                    val intent = Intent(this, LoginActivity::class.java)
-//                                    startActivity(intent)
+                                    val intent = Intent(this, RegistrationforProfile::class.java)
+                                    startActivity(intent)
                                 } else {
                                     Toast.makeText(
                                         this,

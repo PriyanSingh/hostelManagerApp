@@ -13,9 +13,12 @@
         android:theme="@style/Theme.HotelManagerNith"
         tools:targetApi="31">
         <activity
-            android:name=".activity.RoomDetails"
-            android:screenOrientation="portrait"
+            android:name=".activity.RegistrationforProfile"
             android:exported="false" />
+        <activity
+            android:name=".activity.RoomDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ResetPassword"
             android:exported="false"

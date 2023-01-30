@@ -121,15 +121,17 @@
                         android:textSize="20dp"
                         android:inputType="textPersonName"
                         android:text="Roll no" />
+
                     <TextView
                         android:id="@+id/tvHostel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
                         android:layout_marginTop="14dp"
-                        android:textSize="20dp"
+                        android:ems="10"
+                        android:hint="AGE"
                         android:inputType="textPersonName"
-                        android:text="Hostel" />
+                        android:text="Age"
+                        android:textSize="20dp" />
                     <TextView
                         android:id="@+id/tvRoomNo"
                         android:layout_width="match_parent"

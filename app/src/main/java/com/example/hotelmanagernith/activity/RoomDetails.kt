@@ -5,15 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.hotelmanagernith.R
-import com.example.hotelmanagernith.databinding.ActivityRoomDetailsBinding
-import kotlinx.android.synthetic.main.activity_room_details.*
+import com.example.hotelmanagernith.databinding.ActivityRoomDetails2Binding
+
+import kotlinx.android.synthetic.main.activity_room_details2.*
 
 class RoomDetails : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRoomDetailsBinding
+    private lateinit var binding: ActivityRoomDetails2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityRoomDetailsBinding.inflate(layoutInflater)
+        binding=ActivityRoomDetails2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val roomNo=intent.getStringExtra("Roomno").toString()

@@ -1,5 +1,6 @@
 package com.example.hotelmanagernith.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -34,7 +35,9 @@ class HomeActivity : AppCompatActivity() {
             true
         }
         binding.fab.setOnClickListener{
-            makeCurrentFragment(allotmentFragment)
+            val intent= Intent(this,TimeLineLockScreen::class.java)
+            startActivity(intent)
+//            makeCurrentFragment(allotmentFragment)
         }
 
     }

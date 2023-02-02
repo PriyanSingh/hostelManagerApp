@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HotelManagerNith"
         tools:targetApi="31">
         <activity
+            android:name=".activity.TimeLineLockScreen"
+            android:exported="false" />
+        <activity
             android:name=".activity.RegistrationforProfile"
             android:exported="false" />
         <activity

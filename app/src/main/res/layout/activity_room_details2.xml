@@ -12,16 +12,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
-        android:textStyle="bold"
-        android:textSize="30dp"
+        android:background="#187E9E"
         android:gravity="center"
         android:padding="6dp"
-        android:background="#187E9E"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddRoommies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddRoommies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your room-mates"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/linearLayout" />
 
         <LinearLayout
             android:id="@+id/linearLayout"

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.RegistrationforProfile">
+    tools:context=".activity.HomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tvRegistration"
             android:layout_width="260dp"
             android:layout_height="66dp"
             android:gravity="center"
@@ -26,7 +26,7 @@
             app:layout_constraintVertical_bias="0.024" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/etNameProfile"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="87dp"
@@ -41,7 +41,7 @@
             app:layout_constraintVertical_bias="0.3" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/etAge"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="86dp"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName13"
+            android:id="@+id/etRoomNoEdit"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="86dp"
@@ -70,7 +70,7 @@
             app:layout_constraintVertical_bias="0.606" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName14"
+            android:id="@+id/etMobileNo"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="86dp"
@@ -85,7 +85,7 @@
             app:layout_constraintVertical_bias="0.793" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/etAddress"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="86dp"
@@ -100,7 +100,7 @@
             app:layout_constraintVertical_bias="0.706" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName16"
+            android:id="@+id/etRollNoEdit"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="87dp"
@@ -115,7 +115,7 @@
             app:layout_constraintVertical_bias="0.402" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnSaveEdit"
             android:layout_width="132dp"
             android:layout_height="44dp"
             android:layout_marginStart="146dp"

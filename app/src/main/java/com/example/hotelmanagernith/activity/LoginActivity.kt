@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnForgotPassword.setOnClickListener{
-            val intent=Intent(this,HomeActivity::class.java)
+            val intent=Intent(this,ResetPassword::class.java)
 //            sortData()
             startActivity(intent)
         }

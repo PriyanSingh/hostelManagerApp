@@ -19,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         binding=ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val k=intent.getStringExtra("message").toString()
-        Toast.makeText(this, k, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, k, Toast.LENGTH_SHORT).show()
 
         val profileFragement= ProfileFragment()
         val complainFragment= ComplainFragment()

@@ -1,14 +1,14 @@
 package com.example.hotelmanagernith.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.hotelmanagernith.*
 import com.example.hotelmanagernith.databinding.ActivityHomeBinding
-import com.example.hotelmanagernith.fragments.OutpassFragment
+import com.example.hotelmanagernith.fragments.ComplainFragment
 import com.example.hotelmanagernith.fragments.ProfileFragment
+import com.example.hotelmanagernith.fragments.RoomSearch
 
 class HomeActivity : AppCompatActivity() {
 
@@ -22,23 +22,19 @@ class HomeActivity : AppCompatActivity() {
         Toast.makeText(this, k, Toast.LENGTH_SHORT).show()
 
         val profileFragement= ProfileFragment()
-        val outpassFragment= OutpassFragment()
-        val allotmentFragment= HostelNameSelector()
+        val complainFragment= ComplainFragment()
+        val allotmentFragment= RoomSearch()
 
         makeCurrentFragment(profileFragement)
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.profile ->makeCurrentFragment(profileFragement)
-                R.id.outpass ->makeCurrentFragment(outpassFragment)
+                R.id.allotment ->makeCurrentFragment(allotmentFragment)
             }
             true
         }
-        binding.fab.setOnClickListener{
-            val intent= Intent(this,TimeLineLockScreen::class.java)
-            startActivity(intent)
-//            makeCurrentFragment(allotmentFragment)
-        }
+
 
     }
 

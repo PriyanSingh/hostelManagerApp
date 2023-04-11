@@ -11,10 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hotelmanagernith.Models.RoomData
 import com.example.hotelmanagernith.R
 import com.example.hotelmanagernith.activity.RoomDetails
+import com.google.firebase.database.FirebaseDatabase
+
 class RoomAdapter(val context: Context): RecyclerView.Adapter<RoomAdapter.MyViewHolder>() {
 
     val userList=ArrayList<RoomData>()
-    var onItemClick : ((RoomData)->Unit)?=null
+    var databaseRef =
+    FirebaseDatabase.getInstance().getReference("rooms")
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
@@ -32,13 +35,34 @@ class RoomAdapter(val context: Context): RecyclerView.Adapter<RoomAdapter.MyView
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentitem=userList[position]
-
         holder.roomname.text=currentitem.roomNo
         holder.capacity.text=currentitem.capacity
         holder.itemView.setOnClickListener{
-            val intent =Intent(context,RoomDetails::class.java)
-            intent.putExtra("Roomno",currentitem.roomNo)
-            context.startActivity(intent)
+
+            databaseRef=databaseRef.child((currentitem.roomNo).toString())
+            databaseRef.get().addOnSuccessListener { dataSnapshot ->
+                val count = dataSnapshot.child("count").getValue(Int::class.java)
+                    ?: 0
+                val capacity = dataSnapshot.child("capacity").getValue(String::class.java)
+                    ?.toInt()
+                    ?: 0
+                if(count<capacity) {
+                    val intent = Intent(context, RoomDetails::class.java)
+                    intent.putExtra("Roomno", currentitem.roomNo)
+                    context.startActivity(intent)
+                }
+                else{
+                    Toast.makeText(context, "Room already booked", Toast.LENGTH_SHORT).show()
+                }
+                // Use the values here
+            }.addOnFailureListener { exception ->
+                // Handle any errors here
+                Toast.makeText(context, "Error while fetching data", Toast.LENGTH_SHORT).show()
+            }
+
+
+
+
         }
     }
 

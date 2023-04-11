@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.hotelmanagernith.R
 
 
-class OutpassFragment : Fragment() {
+class ComplainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

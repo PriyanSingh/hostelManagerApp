@@ -26,7 +26,7 @@ class RoomRepository {
                         dataSnapshot.getValue(RoomData::class.java)!!
                     }
                     userList.postValue(roomlist)
-                }catch (e:java.lang.Exception){
+                }catch (_:java.lang.Exception){
 
                 }
             }

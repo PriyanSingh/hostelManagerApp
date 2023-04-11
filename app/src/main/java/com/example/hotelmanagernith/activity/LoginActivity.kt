@@ -7,6 +7,8 @@ import android.widget.Toast
 import com.example.hotelmanagernith.fragments.ProfileFragment
 import com.example.hotelmanagernith.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         }
         binding.btnForgotPassword.setOnClickListener{
             val intent=Intent(this,HomeActivity::class.java)
+//            sortData()
             startActivity(intent)
         }
 
@@ -52,15 +55,32 @@ class LoginActivity : AppCompatActivity() {
                         }else{
                             Toast.makeText(this,"Invalid username or password", Toast.LENGTH_SHORT).show()
                         }
-
                     }
-
             }else{
                     Toast.makeText(this, "Incorrect username and password", Toast.LENGTH_SHORT).show()
             }
 
         }
+    }
 
+    private fun sortData() {
+        val db=FirebaseDatabase.getInstance().getReference("users")
+        val query:Query=db.orderByChild("cgpa")
+        query.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // Iterate through the sorted data
+                for (snapshot in dataSnapshot.children) {
+                    // Get the data from each child node
+                    val name = snapshot.child("users").getValue(String::class.java)
+                    val score = snapshot.child("cgpa").getValue(Double::class.java)
+                    // Do something with the data
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle errors here
+            }
+        })
 
     }
 }

@@ -10,8 +10,6 @@ import com.example.hotelmanagernith.databinding.ActivitySignUpBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 
-
-
 class SignUp : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
@@ -36,7 +34,6 @@ class SignUp : AppCompatActivity() {
             if(email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()){
                 if(email.endsWith("@nith.ac.in")) {
                     if (pass == confirmPass) {
-
                         firebaseAuth.createUserWithEmailAndPassword(email, pass)
                             .addOnCompleteListener {
                                 if (it.isSuccessful) {

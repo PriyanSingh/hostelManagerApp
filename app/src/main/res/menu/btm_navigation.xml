@@ -5,7 +5,7 @@
     <item android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_24"/>
-    <item android:title="Outpasses"
-        android:id="@+id/outpass"
+    <item android:title="Allotment"
+        android:id="@+id/allotment"
         android:icon="@drawable/ic_baseline_insert_drive_file_24"/>
 </menu>
